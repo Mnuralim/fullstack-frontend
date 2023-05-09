@@ -41,7 +41,7 @@ export default function Tabs({ tabs }) {
                 {tab.product.map((p) => (
                   <motion.div className="w-[360px] h-[306px] shadow relative group" key={p.id} initial="hidden" animate={activeTab === tab.id ? "visible" : "hidden"} variants={variants} transition={{ duration: 0.3 }}>
                     <div className="w-[360px] h-[270px] bg-[#F6F7FB] flex justify-center items-center group-hover:bg-white transition-colors duration-300 ease-in-out">
-                      <Image src={p.thumbnail} width={223} height={230} />
+                      <Image src={p.thumbnail} width={223} height={230} alt="product" />
                     </div>
                     <div className="flex justify-between pt-3 ">
                       <div>

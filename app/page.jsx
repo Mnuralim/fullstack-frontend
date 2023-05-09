@@ -59,7 +59,7 @@ export default function Home() {
           <div className="h-full w-full  flex items-center justify-center relative z-10">
             <div className="z-10">
               <div className="z-30  top-11">
-                <Image src={"/img/chair.png"} width={629} height={629}></Image>
+                <Image src={"/img/chair.png"} width={629} height={629} alt="chair" />
               </div>
             </div>
             <div className="absolute z-0">

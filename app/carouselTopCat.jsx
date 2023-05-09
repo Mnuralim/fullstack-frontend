@@ -35,7 +35,7 @@ const CarouselTopCat = ({ datas }) => {
         className="mySwiper "
       >
         {datas.map((data) => (
-          <div>
+          <div key={data._id}>
             <SwiperSlide>
               <div>
                 <div className="w-[269px] h-[345px] flex flex-col items-center group relative">

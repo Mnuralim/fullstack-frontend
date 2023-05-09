@@ -44,7 +44,7 @@ const FixedElement = () => {
         <div className="px-4">
           <h2 className="text-base font-semibold text-[#151875] pt-2">Set amount and notes</h2>
           <div className="flex items-center py-[14px]">
-            <Image src="/img/image 1168.png" width={48} height={48} />
+            <Image src="/img/image 1168.png" width={48} height={48} alt="product" />
             <p className="text-[1rem] text-[#212121]">Putih</p>
           </div>
           <div className="flex items-center gap-2">
@@ -313,22 +313,22 @@ const Review = () => {
           </div>
           <div className="grid grid-cols-6 ">
             <div className="w-[88px] h-[88px]">
-              <Image src={"/img/Rectangle 134.png"} width={88} height={88} className="rounded-lg" />
+              <Image src={"/img/Rectangle 134.png"} width={88} height={88} className="rounded-lg" alt="product" />
             </div>
             <div className="w-[88px] h-[88px]">
-              <Image src={"/img/Rectangle 134.png"} width={88} height={88} className="rounded-lg" />
+              <Image src={"/img/Rectangle 134.png"} width={88} height={88} className="rounded-lg" alt="product" />
             </div>
             <div className="w-[88px] h-[88px]">
-              <Image src={"/img/Rectangle 134.png"} width={88} height={88} className="rounded-lg" />
+              <Image src={"/img/Rectangle 134.png"} width={88} height={88} className="rounded-lg" alt="product" />
             </div>
             <div className="w-[88px] h-[88px]">
-              <Image src={"/img/Rectangle 134.png"} width={88} height={88} className="rounded-lg" />
+              <Image src={"/img/Rectangle 134.png"} width={88} height={88} className="rounded-lg" alt="product" />
             </div>
             <div className="w-[88px] h-[88px]">
-              <Image src={"/img/Rectangle 134.png"} width={88} height={88} className="rounded-lg" />
+              <Image src={"/img/Rectangle 134.png"} width={88} height={88} className="rounded-lg" alt="product" />
             </div>
             <div className="w-[88px] h-[88px]">
-              <Image src={"/img/Rectangle 134.png"} width={88} height={88} className="rounded-lg" />
+              <Image src={"/img/Rectangle 134.png"} width={88} height={88} className="rounded-lg" alt="product" />
             </div>
           </div>
           <div className="flex justify-between items-center pt-10 pb-8">
@@ -393,10 +393,10 @@ const Review = () => {
                 <div>
                   <div className="flex items-center gap-2">
                     <div>
-                      <Image src={"/img/Rectangle 134.png"} width={64} height={64} className="rounded-lg w-16 h-16" />
+                      <Image src={"/img/Rectangle 134.png"} width={64} height={64} className="rounded-lg w-16 h-16" alt="profile" />
                     </div>
                     <div>
-                      <Image src={"/img/Rectangle 134.png"} width={64} height={64} className="rounded-lg w-16 h-16" />
+                      <Image src={"/img/Rectangle 134.png"} width={64} height={64} className="rounded-lg w-16 h-16" alt="profile" />
                     </div>
                   </div>
                 </div>

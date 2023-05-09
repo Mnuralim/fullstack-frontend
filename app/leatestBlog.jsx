@@ -12,7 +12,7 @@ const LeatestBlog = () => {
         </div>
         <div className="flex justify-center gap-14">
           <div className="w-[370px] h-[493px] shadow-md group">
-            <Image src={"/img/blog1.png"} width={370} height={255} className="rounded-md" />
+            <Image src={"/img/blog1.png"} width={370} height={255} className="rounded-md" alt="blog" />
             <div className="pl-[19px] ">
               <div className="flex gap-[29px] pt-[19px] pb-[31px]">
                 <div className="flex items-center gap-2">
@@ -47,7 +47,7 @@ const LeatestBlog = () => {
             </div>
           </div>
           <div className="w-[370px] h-[493px] shadow-md group">
-            <Image src={"/img/Frame 4.png"} width={370} height={255} className="rounded-md" />
+            <Image src={"/img/Frame 4.png"} width={370} height={255} className="rounded-md" alt="blog" />
             <div className="pl-[19px] ">
               <div className="flex gap-[29px] pt-[19px] pb-[31px]">
                 <div className="flex items-center gap-2">
@@ -82,7 +82,7 @@ const LeatestBlog = () => {
             </div>
           </div>
           <div className="w-[370px] h-[493px] shadow-md group">
-            <Image src={"/img/Frame 3.png"} width={370} height={255} className="rounded-md" />
+            <Image src={"/img/Frame 3.png"} width={370} height={255} className="rounded-md" alt="blog" />
             <div className="pl-[19px] ">
               <div className="flex gap-[29px] pt-[19px] pb-[31px]">
                 <div className="flex items-center gap-2">

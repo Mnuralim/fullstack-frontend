@@ -136,7 +136,7 @@ const MyProducts = () => {
             {filterProduct.map((product) => (
               <div key={product._id} className="w-full  h-[254px] flex items-center  relative gap-[30px] ">
                 <div className="flex justify-center  items-center ">
-                  <Image src={product.thumbnail} width={203} height={203} className="rounded-md" />
+                  <Image src={product.thumbnail} width={203} height={203} className="rounded-md" alt={product.title} />
                 </div>
                 <div>
                   <div className="flex gap-[18px]">

@@ -22,7 +22,7 @@ const Offer = () => {
           </div>
           <div className="w-[270px] h-[320px] shadow-lg flex flex-col justify-center  items-center px-[26px]">
             <div className="pb-[27px]">
-              <Image src={"/img/cashback 1.png"} width={65} height={65} />
+              <Image src={"/img/cashback 1.png"} width={65} height={65} alt="offer" />
             </div>
             <div className="pb-5">
               <p className="text-[#151875] text-[22px]">24/7 Support</p>
@@ -33,7 +33,7 @@ const Offer = () => {
           </div>
           <div className="w-[270px] h-[320px] shadow-lg flex flex-col justify-center  items-center px-[26px]">
             <div className="pb-[27px]">
-              <Image src={"/img/premium-quality 1.png"} width={65} height={65} />
+              <Image src={"/img/premium-quality 1.png"} width={65} height={65} alt="offer" />
             </div>
             <div className="pb-5">
               <p className="text-[#151875] text-[22px]">24/7 Support</p>
@@ -44,7 +44,7 @@ const Offer = () => {
           </div>
           <div className="w-[270px] h-[320px] shadow-lg flex flex-col justify-center  items-center px-[26px]">
             <div className="pb-[27px]">
-              <Image src={"/img/24-hours-support 1.png"} width={65} height={65} />
+              <Image src={"/img/24-hours-support 1.png"} width={65} height={65} alt="offer" />
             </div>
             <div className="pb-5">
               <p className="text-[#151875] text-[22px]">24/7 Support</p>
