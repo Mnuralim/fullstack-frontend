@@ -134,7 +134,7 @@ const MyProducts = () => {
         <div className="flex justify-center ">
           <div className="flex flex-col w-full gap-8 ">
             {filterProduct.map((product) => (
-              <div className="w-full  h-[254px] flex items-center  relative gap-[30px] ">
+              <div key={product._id} className="w-full  h-[254px] flex items-center  relative gap-[30px] ">
                 <div className="flex justify-center  items-center ">
                   <Image src={product.thumbnail} width={203} height={203} className="rounded-md" />
                 </div>
