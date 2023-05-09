@@ -29,7 +29,7 @@ const MyProducts = () => {
     return data;
   };
 
-  const { data, err } = useSWR("http://localhost:5000/api/products", fetcher, {
+  const { data, err } = useSWR("https://fullstack-backend-sukaturu.vercel.app/api/products", fetcher, {
     revalidateOnMount: true,
     revalidateOnFocus: false,
   });

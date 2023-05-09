@@ -39,7 +39,7 @@ const AddImages = ({ product }) => {
       formDataToSend.append("images", image);
     });
 
-    const response = await fetch(`http://localhost:5000/api/products/add-images/${product._id}`, {
+    const response = await fetch(`https://fullstack-backend-sukaturu.vercel.app/api/products/add-images/${product._id}`, {
       method: "PUT",
       body: formDataToSend,
     });

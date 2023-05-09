@@ -29,7 +29,7 @@ const AllProducts = () => {
     return data;
   };
 
-  const { data, err } = useSWR("https://fullstack-backend-silk.vercel.app/api/products", fetcher);
+  const { data, err } = useSWR("https://fullstack-backend-sukaturu.vercel.app/api/products", fetcher);
 
   if (!data) return <div>loading...</div>;
   if (err) return <div>eror</div>;

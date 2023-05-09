@@ -35,7 +35,7 @@ const DeleteProduct = ({ product }) => {
 
   async function handleDelete(prodId) {
     try {
-      const response = await fetch(`http://localhost:5000/api/products/delete-product/${prodId}`, {
+      const response = await fetch(`https://fullstack-backend-sukaturu.vercel.app/api/products/delete-product/${prodId}`, {
         method: "DELETE",
       });
       console.log(response.ok);

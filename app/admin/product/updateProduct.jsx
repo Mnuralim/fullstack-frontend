@@ -31,7 +31,7 @@ const UpdateProduct = ({ product }) => {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const response = await fetch(`http://localhost:5000/api/products/${product._id}`);
+      const response = await fetch(`https://fullstack-backend-sukaturu.vercel.app/api/products/${product._id}`);
       const data = await response.json();
       setFormData(data);
     };
