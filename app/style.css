@@ -1,0 +1,22 @@
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 6px;
+  margin: 0 10px;
+  border-radius: 10px;
+  background-color: red;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: blue;
+}
+
+.prod-icon:hover {
+  background-color: #eeeffb;
+}
