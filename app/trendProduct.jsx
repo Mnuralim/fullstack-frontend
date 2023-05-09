@@ -9,7 +9,7 @@ const TrendProduct = () => {
           <div className="w-[1055px] h-[579px] flex items-center">
             <div className="flex items-center relative">
               <div className="z-20">
-                <Image src={"/img/trend-product.png"} width={509} height={550} />
+                <Image src={"/img/trend-product.png"} width={509} height={550} alt="trend" />
               </div>
               <div className="absolute z-10">
                 <svg width="481" height="450" viewBox="0 0 481 450" fill="none" xmlns="http://www.w3.org/2000/svg">
