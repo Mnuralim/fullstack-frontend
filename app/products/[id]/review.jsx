@@ -351,7 +351,7 @@ const Review = () => {
           </div>
           <div>
             {datas.map((data) => (
-              <div className="border-b border-b-slate-200 pb-3">
+              <div key={data.id} className="border-b border-b-slate-200 pb-3">
                 <div className="flex justify-between items-center pb-[7px]">
                   <div className="flex items-center gap-2">
                     <div>
