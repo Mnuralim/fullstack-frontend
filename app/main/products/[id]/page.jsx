@@ -20,7 +20,7 @@ const SingleProductPage = ({ params }) => {
     const data = await res.json();
     return data;
   };
-  const url = `https://fullstack-backend-sukaturu.vercel.app/api/products/${params.id}`;
+  const url = `http://localhost:5000/api/products/${params.id}`;
   const { data, err } = useSWR(url, fetcher);
 
   if (!data) return <div>loading...</div>;

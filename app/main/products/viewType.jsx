@@ -15,23 +15,23 @@ export function GridView({ products }) {
             <Image src={product.thumbnail} layout="fill" className="rounded" alt={product.title} sizes="(max-width: 260px) 259px, 279px" />
             <div className="flex flex-col gap-[12px] absolute left-[-22px] opacity-0 bottom-6 group-hover:opacity-100 group-hover:left-[11px] transition-all duration-500 ease-in-out z-50">
               <div className="">
-                <Link className="p-[7px] rounded-full text-[#151875] bg-[rgb(250,142,19)] hover:bg-white" href={"/"}>
+                <Link className="p-[7px] rounded-full text-[#151875] bg-[rgb(250,142,19)] hover:bg-white" href={"#"}>
                   <ShoppingCartOutlinedIcon className="text-[16px]" />
                 </Link>
               </div>
               <div>
-                <Link className="p-[7px] rounded-full text-[#151875] bg-[rgb(254,19,152)] hover:bg-white" href={"/"}>
+                <Link className="p-[7px] rounded-full text-[#151875] bg-[rgb(254,19,152)] hover:bg-white" href={"#"}>
                   <FavoriteBorderOutlinedIcon className="text-[16px]" />
                 </Link>
               </div>
               <div>
-                <Link className="p-[7px] rounded-full text-[#151875] bg-[rgb(93,52,255)] hover:bg-white" href={`/products/${product._id}`}>
+                <Link className="p-[7px] rounded-full text-[#151875] bg-[rgb(93,52,255)] hover:bg-white" href={`/main/products/${product._id}`}>
                   <ZoomInOutlinedIcon className="text-[16px]" />
                 </Link>
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-between items-center">
+          <div className="flex flex-col items-center justify-between">
             <h2 className="text-[18px] text-[#151875] font-bold">{product.title}</h2>
             <div>
               <span className="w-3 h-3 rounded-full bg-[#DE9034] inline-block mr-[5px]"></span>
@@ -56,13 +56,13 @@ export function ListView({ products }) {
     <div className="flex flex-col w-full gap-y-20 ">
       {products.map((product) => (
         <div key={product._id} className="w-full  h-[254px] flex items-center  relative gap-[30px] ">
-          <div className="flex justify-center  items-center ">
+          <div className="flex items-center justify-center ">
             <Image src={product.thumbnail} width={203} height={203} alt={product.title} className="w-auto h-auto" />
           </div>
           <div>
             <div className="flex gap-[18px]">
               <h2 className="text-[20px] text-[#111C85] font-semibold">{product.title}</h2>
-              <div className="absolute  left-1/2 transform -translate-x-1/2 ">
+              <div className="absolute transform -translate-x-1/2 left-1/2 ">
                 <span className="w-3 h-3 rounded-full bg-[#DE9034] inline-block mr-[5px]"></span>
                 <span className="w-3 h-3 rounded-full bg-[#E60584] inline-block mr-[5px]"></span>
                 <span className="w-3 h-3 rounded-full bg-[#5E37FF] inline-block"></span>
@@ -90,7 +90,7 @@ export function ListView({ products }) {
                 </Link>
               </div>
               <div>
-                <Link className=" py-[10px] bg-transparent  px-[10px] rounded-full hover:bg-[#F6F5FF] " href={"/"}>
+                <Link className=" py-[10px] bg-transparent  px-[10px] rounded-full hover:bg-[#F6F5FF] " href={`/main/products/${product._id}`}>
                   <ZoomInOutlinedIcon />
                 </Link>
               </div>

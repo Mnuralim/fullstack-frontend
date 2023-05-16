@@ -8,7 +8,7 @@ const Subs = () => {
         <div
           className="bg-cover bg-center w-full h-[462px] flex justify-center text-center"
           style={{
-            backgroundImage: "url('./img/Rectangle 102.png')",
+            backgroundImage: "url('/img/Rectangle 102.png')",
           }}
         >
           <div className="max-w-[574px] pt-[174px]">

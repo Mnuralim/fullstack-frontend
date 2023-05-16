@@ -31,7 +31,9 @@ const UpdateProduct = ({ product }) => {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const response = await fetch(`https://fullstack-backend-sukaturu.vercel.app/api/products/${product._id}`);
+      const response = await fetch(`http://localhost:5000/api/products/${product._id}`, {
+        cache: "no-store",
+      });
       const data = await response.json();
       setFormData(data);
     };
@@ -84,11 +86,12 @@ const UpdateProduct = ({ product }) => {
       body: formDataToSend,
     });
     console.log(response);
-    if (response.status === 201) {
+    if (response.status === 201 || response.ok) {
       setOpen(true);
       setLoading(false);
     }
     setTimeout(() => {
+      // router.push("/admin/product");
       router.refresh();
       setModal(false);
     }, 2000);

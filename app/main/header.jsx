@@ -8,14 +8,15 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import SearchIcon from "@mui/icons-material/Search";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
 
 const Header = () => {
   const [isAdmin, setIsAdmin] = useState(true);
   return (
     <>
       <header className="z-[999] w-screen fixed">
-        <div className=" w-screen">
-          <div className=" bg-purple w-full ">
+        <div className="w-screen ">
+          <div className="w-full bg-purple">
             <div className="flex justify-between items-center py-[13px] px-[150px]">
               <div className="flex justify-between gap-12">
                 <div className="flex gap-[10px]">
@@ -42,10 +43,12 @@ const Header = () => {
                     </span>
                   </div>
                   <div className="text-[#F1F1F1] text-base font-semibold">
-                    Login
-                    <span>
-                      <PersonIcon className="w-[17px]" />
-                    </span>
+                    <button onClick={() => signOut()}>
+                      Logout
+                      <span>
+                        <PersonIcon className="w-[17px]" />
+                      </span>
+                    </button>
                   </div>
                   <div className="text-[#F1F1F1] text-base font-semibold mr-[26px]">
                     Wishlist
@@ -62,27 +65,28 @@ const Header = () => {
           </div>
 
           <nav className="px-[150px] py-[22px] font-lato bg-[#ffffff] ">
-            <div className="flex justify-between items-center ">
+            <div className="flex items-center justify-between ">
               <div>
                 <h1 className="text-[#0D0E43] font-bold text-[34px]">Alimn</h1>
               </div>
               <div className="flex gap-[35px]">
-                <Link href={"/"}>
-                  <div className="text-[#0D0E43] text-base font-normal hover:text-[#FB2E86] cursor-pointer">
-                    Home
-                    <span>
-                      <ExpandMoreIcon />
-                    </span>
-                  </div>
+                <Link href={"/main"}>
+                  <div className="text-[#0D0E43] text-base font-normal hover:text-[#FB2E86] cursor-pointer">Home</div>
                 </Link>
-                <div className="text-[#0D0E43] text-base font-normal hover:text-[#FB2E86] cursor-pointer">Pages</div>
-                <Link href={"/products"}>
+                <Link href={"/main/about"}>
+                  <div className="text-[#0D0E43] text-base font-normal hover:text-[#FB2E86] cursor-pointer">About</div>
+                </Link>
+                <Link href={"/main/products"}>
                   <div className="text-[#0D0E43] text-base font-normal hover:text-[#FB2E86] cursor-pointer">Products</div>
                 </Link>
                 <div className="text-[#0D0E43] text-base font-normal hover:text-[#FB2E86] cursor-pointer">Blog</div>
-                <div className="text-[#0D0E43] text-base font-normal hover:text-[#FB2E86] cursor-pointer">Shop</div>
-                <div className="text-[#0D0E43] text-base font-normal hover:text-[#FB2E86] cursor-pointer">Contact</div>
-                <Link href={"/admin/product"}>{isAdmin && <div className="text-[#0D0E43] text-base font-normal hover:text-[#FB2E86] cursor-pointer">My Product</div>}</Link>
+                <Link href={"/main/faq"}>
+                  <div className="text-[#0D0E43] text-base font-normal hover:text-[#FB2E86] cursor-pointer">Faq</div>
+                </Link>
+                <Link href={"/main/contact"}>
+                  <div className="text-[#0D0E43] text-base font-normal hover:text-[#FB2E86] cursor-pointer">Contact</div>
+                </Link>
+                <Link href={"/main/admin/product"}>{isAdmin && <div className="text-[#0D0E43] text-base font-normal hover:text-[#FB2E86] cursor-pointer">My Product</div>}</Link>
               </div>
               <div>
                 <form action="" className="flex items-center ">

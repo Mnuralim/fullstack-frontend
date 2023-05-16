@@ -6,6 +6,9 @@ const nextConfig = {
   images: {
     domains: ["res.cloudinary.com"],
   },
+  env: {
+    NEXTAUTH_SECRET: "clnfjdnfjljlhufbu7njnjnjnkdnk",
+  },
 };
 
 module.exports = nextConfig;

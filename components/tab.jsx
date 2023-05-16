@@ -21,7 +21,7 @@ export default function Tabs({ tabs }) {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
 
   return (
-    <div className="flex flex-col items-center relative">
+    <div className="relative flex flex-col items-center">
       <ul className="flex mb-4 text-[#151875] text-[18px] font-normal gap-[60px] capitalize pb-[28px]">
         {tabs.map((tab) => (
           <li
@@ -39,7 +39,7 @@ export default function Tabs({ tabs }) {
             <div className={`${activeTab === tab.id ? "block" : "hidden"}`}>
               <div className="grid grid-cols-3 gap-x-[37px] gap-y-[120px]">
                 {tab.product.map((p) => (
-                  <motion.div className="w-[360px] h-[306px] shadow relative group" key={p.id} initial="hidden" animate={activeTab === tab.id ? "visible" : "hidden"} variants={variants} transition={{ duration: 0.3 }}>
+                  <motion.div className="w-[360px] h-[306px] shadow-2xl relative group" key={p.id} initial="hidden" animate={activeTab === tab.id ? "visible" : "hidden"} variants={variants} transition={{ duration: 0.3 }}>
                     <div className="w-[360px] h-[270px] bg-[#F6F7FB] flex justify-center items-center group-hover:bg-white transition-colors duration-300 ease-in-out">
                       <Image src={p.thumbnail} width={223} height={230} alt="product" />
                     </div>

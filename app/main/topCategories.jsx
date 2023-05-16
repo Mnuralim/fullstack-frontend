@@ -6,47 +6,47 @@ const datas = [
   {
     id: 1,
     thumbnail: "/img/image 20.png",
-    tittle: "Mini LCW Chair",
+    title: "Mini LCW Chair",
     price: "56.00",
   },
   {
     id: 2,
     thumbnail: "/img/image 1168.png",
-    tittle: "Mini LCW Chair",
+    title: "Mini LCW Chair",
     price: "56.00",
   },
   {
     id: 3,
     thumbnail: "/img/image 20.png",
-    tittle: "Mini LCW Chair",
+    title: "Mini LCW Chair",
     price: "56.00",
   },
   {
-    id: 2,
+    id: 4,
+    thumbnail: "/img/image 20.png",
+    title: "Mini LCW Chair",
+    price: "56.00",
+  },
+  {
+    id: 5,
+    thumbnail: "/img/image 20.png",
+    title: "Mini LCW Chair",
+    price: "56.00",
+  },
+  {
+    id: 6,
+    thumbnail: "/img/image 20.png",
+    title: "Mini LCW Chair",
+    price: "56.00",
+  },
+  {
+    id: 7,
     thumbnail: "/img/image 20.png",
     tittle: "Mini LCW Chair",
     price: "56.00",
   },
   {
-    id: 2,
-    thumbnail: "/img/image 20.png",
-    tittle: "Mini LCW Chair",
-    price: "56.00",
-  },
-  {
-    id: 2,
-    thumbnail: "/img/image 20.png",
-    tittle: "Mini LCW Chair",
-    price: "56.00",
-  },
-  {
-    id: 2,
-    thumbnail: "/img/image 20.png",
-    tittle: "Mini LCW Chair",
-    price: "56.00",
-  },
-  {
-    id: 2,
+    id: 8,
     thumbnail: "/img/image 20.png",
     tittle: "Mini LCW Chair",
     price: "56.00",
@@ -61,7 +61,7 @@ const TopCategories = () => {
           <div>
             <h1 className="text-[#1A0B5B] text-[42px] font-semibold text-center pt-[126px]">Top Categories</h1>
           </div>
-          <div className="flex justify-center pt-14 px-[160px]">
+          <div>
             <CarouselTopCat datas={datas} />
           </div>
         </div>

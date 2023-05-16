@@ -7,9 +7,9 @@ import "swiper/css/pagination";
 import "./style.css";
 import { Pagination } from "swiper";
 
-export default function Carousel({ images, width, height, component }) {
+export default function Carousel({ images }) {
   return (
-    <div className="flex justify-center items-center w-[270px] h-[236px]">
+    <div>
       <Swiper
         spaceBetween={30}
         pagination={{
@@ -17,17 +17,19 @@ export default function Carousel({ images, width, height, component }) {
           el: ".swiper-pagination",
         }}
         modules={[Pagination]}
-        className="w-full h-full relative"
+        className="flex justify-center items-center w-[270px] h-[236px]"
       >
         {images.map((image) => (
-          <>
-            <SwiperSlide className="flex justify-center items-center">
-              <Image width={width} height={height} src={image.src} alt="product" />
+          <div>
+            <SwiperSlide key={image.id} className="flex items-center justify-center">
+              <div>
+                <Image width={270} height={236} src={image.src} alt="product" className="w-[270px] h-[236px] " />
+              </div>
             </SwiperSlide>
-          </>
+          </div>
         ))}
 
-        <div className="swiper-pagination  "></div>
+        <div className="swiper-pagination "></div>
       </Swiper>
     </div>
   );

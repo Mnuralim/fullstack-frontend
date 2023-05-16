@@ -1,6 +1,6 @@
-import Footer from "./footer";
+"use client";
 import "./globals.css";
-import Header from "./header";
+import { SessionProvider } from "next-auth/react";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,10 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="font-sans max-w-[1920px]" style={{ scrollBehavior: "smooth" }}>
-        <Header />
-        {children}
-        <div className="mb-52"></div>
-        <Footer />
+        <SessionProvider>{children}</SessionProvider>
       </body>
     </html>
   );

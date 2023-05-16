@@ -45,7 +45,7 @@ const DiscountTab = ({ tabs }) => {
                       <div>
                         <div className="flex items-center gap-[6px] text-[#B8B8DC] text-base font-normal">
                           <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 1L6 12L1 7" stroke="#7569B2" stroke-width="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M17 1L6 12L1 7" stroke="#7569B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
                           Material expose like metals
                         </div>
@@ -53,7 +53,7 @@ const DiscountTab = ({ tabs }) => {
                       <div>
                         <div className="flex items-center gap-[6px] text-[#B8B8DC] text-base font-normal">
                           <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 1L6 12L1 7" stroke="#7569B2" stroke-width="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M17 1L6 12L1 7" stroke="#7569B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
                           Clear lines and geomatric figures
                         </div>
@@ -61,7 +61,7 @@ const DiscountTab = ({ tabs }) => {
                       <div>
                         <div className="flex items-center gap-[6px] text-[#B8B8DC] text-base font-normal">
                           <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 1L6 12L1 7" stroke="#7569B2" stroke-width="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M17 1L6 12L1 7" stroke="#7569B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
                           Simple neutral colours.
                         </div>
@@ -69,7 +69,7 @@ const DiscountTab = ({ tabs }) => {
                       <div>
                         <div className="flex items-center gap-[6px] text-[#B8B8DC] text-base font-normal">
                           <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 1L6 12L1 7" stroke="#7569B2" stroke-width="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M17 1L6 12L1 7" stroke="#7569B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
                           Material expose like metals
                         </div>

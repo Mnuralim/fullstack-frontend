@@ -1,19 +1,19 @@
 "use client";
-import React from "react";
-import { useState } from "react";
-import useSWR from "swr";
-import Image from "next/image";
-import { Rating } from "@mui/material";
+import React, { useState } from "react";
+import WindowSharpIcon from "@mui/icons-material/WindowSharp";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-import Link from "next/link";
-import UpdateProduct from "./updateProduct";
-import DeleteProduct from "./deleteProduct";
-import AddImages from "./addImages";
+import { GridView, ListView } from "./viewType";
+import useSWR from "swr";
 
-const MyProducts = () => {
+const AllProducts = () => {
+  const [viewType, setViewType] = useState("grid");
   const [search, setSeacrh] = useState("");
   const [sortValue, setSortValue] = useState("title-asc");
   const [limitPage, setLimitPage] = useState("25");
+
+  const handleViewType = (type) => {
+    setViewType(type);
+  };
 
   const handleSortChange = (e) => {
     setSortValue(e.target.value);
@@ -29,10 +29,7 @@ const MyProducts = () => {
     return data;
   };
 
-  const { data, err } = useSWR("https://fullstack-backend-sukaturu.vercel.app/api/products", fetcher, {
-    revalidateOnMount: true,
-    revalidateOnFocus: false,
-  });
+  const { data, err } = useSWR("http://localhost:5000/api/products", fetcher);
 
   if (!data) return <div>loading...</div>;
   if (err) return <div>eror</div>;
@@ -57,25 +54,21 @@ const MyProducts = () => {
   } else if (limitPage === "500") {
     filterProduct.slice(0, 500);
   }
+
   return (
     <>
       <section className="pt-[146px]">
         <div className="bg-[#F6F5FF] w-full h-[286px]">
           <div className="flex items-center h-full px-[150px]">
             <div>
-              <h1 className="text-[#101750] text-[36px] font-semibold">My Product</h1>
-              <p className="text-base text-[#FB2E86] pt-[9px]">Update,Delete Your Product</p>
+              <h1 className="text-[#101750] text-[36px] font-semibold">All Products</h1>
+              <p className="text-base text-[#FB2E86] pt-[9px]">Everything You Need is Here</p>
             </div>
           </div>
         </div>
       </section>
 
       <section className="pt-[124px]">
-        <div className="px-[150px] pb-7 ">
-          <Link href={"/admin/add"} className="py-[7px] text-white  px-[10px] rounded-md bg-blue-600 hover:bg-opacity-80">
-            Add New Product
-          </Link>
-        </div>
         <div className="flex px-[150px] justify-between items-center">
           <div>
             <div>
@@ -86,7 +79,7 @@ const MyProducts = () => {
           <div className="flex justify-between gap-[25px] items-center">
             <div className="flex items-center gap-2">
               <div className="text-[#3F509E] text-base">Per Page:</div>
-              <div className="w-[55px] h-[25px] ">
+              <div className="w-[55px] h-[25px] border block">
                 <div>
                   <select name="limit" id="limit" className="outline-none  border  text-slate-500 text-sm  px-[6px] py-[2px]" onChange={handleLimitPage}>
                     <option value="25">25</option>
@@ -119,7 +112,10 @@ const MyProducts = () => {
             </div>
             <div className="flex items-center gap-1">
               <div className="text-[#3F509E] text-base">View:</div>
-              <button>
+              <button onClick={() => handleViewType("grid")}>
+                <WindowSharpIcon className="w-3 h-3 text-[#151875]" />
+              </button>
+              <button onClick={() => handleViewType("list")}>
                 <FormatListBulletedIcon className="w-3 h-3 text-[#151875]" />
               </button>
             </div>
@@ -132,46 +128,8 @@ const MyProducts = () => {
 
       <section className="px-[150px] pt-[100px]">
         <div className="flex justify-center ">
-          <div className="flex flex-col w-full gap-8 ">
-            {filterProduct.map((product) => (
-              <div key={product._id} className="w-full  h-[254px] flex items-center  relative gap-[30px] ">
-                <div className="flex justify-center  items-center ">
-                  <Image src={product.thumbnail} width={203} height={203} className="rounded-md" alt={product.title} />
-                </div>
-                <div>
-                  <div className="flex gap-[18px]">
-                    <h2 className="text-[20px] text-[#111C85] font-semibold">{product.title}</h2>
-                    <div className="absolute  left-1/2 transform -translate-x-1/2 ">
-                      <span className="w-3 h-3 rounded-full bg-[#DE9034] inline-block mr-[5px]"></span>
-                      <span className="w-3 h-3 rounded-full bg-[#E60584] inline-block mr-[5px]"></span>
-                      <span className="w-3 h-3 rounded-full bg-[#5E37FF] inline-block"></span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-[10px] pt-[14px] pb-[11px]">
-                    <p className="text-[#111C85] text-[15px]">${product.price}</p>
-                    <p>
-                      <del className="text-[#FF2AAA] text-[15px]">${product.price}</del>
-                    </p>
-                    <div>
-                      <Rating name="read-only" readOnly value={product.totalrating} size="small" />
-                    </div>
-                  </div>
-                  <p className="w-[590px] text-[#9295AA] font-normal text-[18px] leading-[31px] pb-[31px]">{product.description}</p>
-                  <div className="flex items-center gap-[34px] ">
-                    <div>
-                      <AddImages product={product} />
-                    </div>
-                    <div className="">
-                      <UpdateProduct product={product} />
-                    </div>
-                    <div>
-                      <DeleteProduct product={product} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* <ListView products={products} /> */}
+          {viewType === "grid" ? <GridView products={filterProduct} /> : <ListView products={filterProduct} />}
         </div>
       </section>
       <section className="pt-[83px] pb-[21px]">
@@ -188,4 +146,4 @@ const MyProducts = () => {
   );
 };
 
-export default MyProducts;
+export default AllProducts;
