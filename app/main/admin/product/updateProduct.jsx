@@ -31,7 +31,7 @@ const UpdateProduct = ({ product }) => {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const response = await fetch(`http://localhost:5000/api/products/${product._id}`, {
+      const response = await fetch(`${process.env.API_URL}/api/products/${product._id}`, {
         cache: "no-store",
       });
       const data = await response.json();
@@ -81,7 +81,7 @@ const UpdateProduct = ({ product }) => {
     formDataToSend.append("color", formData.color);
     formDataToSend.append("quantity", formData.quantity);
 
-    const response = await fetch(`http://localhost:5000/api/products/update-product/${product._id}`, {
+    const response = await fetch(`${process.env.API_URL}/api/products/update-product/${product._id}`, {
       method: "PUT",
       body: formDataToSend,
     });

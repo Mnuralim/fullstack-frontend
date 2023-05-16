@@ -35,7 +35,7 @@ const DeleteProduct = ({ product }) => {
 
   async function handleDelete(prodId) {
     try {
-      const response = await fetch(`http://localhost:5000/api/products/delete-product/${prodId}`, {
+      const response = await fetch(`${process.env.API_URL}/api/products/delete-product/${prodId}`, {
         method: "DELETE",
       });
       console.log(response.ok);
@@ -67,7 +67,7 @@ const DeleteProduct = ({ product }) => {
 
       <div className="modal z-[99999999999999]">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Are sure to delete {product.title} ?</h3>
+          <h3 className="text-lg font-bold">Are sure to delete {product.title} ?</h3>
           <div className="modal-action">
             <button type="button" className="btn" onClick={handleChange}>
               Close

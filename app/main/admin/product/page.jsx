@@ -29,7 +29,7 @@ const MyProducts = () => {
     return data;
   };
 
-  const { data, err } = useSWR("http://localhost:5000/api/products", fetcher);
+  const { data, err } = useSWR(`${process.env.API_URL}/api/products`, fetcher);
 
   if (!data) return <div>loading...</div>;
   if (err) return <div>eror</div>;

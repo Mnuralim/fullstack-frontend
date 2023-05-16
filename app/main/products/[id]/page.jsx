@@ -20,7 +20,7 @@ const SingleProductPage = ({ params }) => {
     const data = await res.json();
     return data;
   };
-  const url = `http://localhost:5000/api/products/${params.id}`;
+  const url = `${process.env.API_URL}/api/products/${params.id}`;
   const { data, err } = useSWR(url, fetcher);
 
   if (!data) return <div>loading...</div>;
@@ -50,11 +50,11 @@ const SingleProductPage = ({ params }) => {
               ))}
             </div>
             <div className="flex justify-center items-center w-[375px] h-[487px] rounded">
-              {/* <img src={data.thumbnail} className="rounded w-full h-full" /> */}
-              <Image src={data.thumbnail} alt="thumbnail" className="rounded w-full h-full " width={375} height={485} />
+              {/* <img src={data.thumbnail} className="w-full h-full rounded" /> */}
+              <Image src={data.thumbnail} alt="thumbnail" className="w-full h-full rounded " width={375} height={485} />
             </div>
           </div>
-          <div className=" h-full w-1/2 flex flex-col justify-center">
+          <div className="flex flex-col justify-center w-1/2 h-full ">
             <h2 className="text-[#0D134E] text-[36px] font-semibold pb-[13px]">{data.title}</h2>
             <div>
               <Rating value={data.totalrating} readOnly size="small" />

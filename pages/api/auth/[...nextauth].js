@@ -11,8 +11,7 @@ export default NextAuth({
       async authorize(credentials, req) {
         try {
           const { email, password } = credentials;
-          const user = await axios.post("http://localhost:5000/api/login", { email, password });
-          console.log(user);
+          const user = await axios.post(`${process.env.API_URL}/api/login`, { email, password });
           return user.data.data;
         } catch (error) {
           throw new Error(error.response.data.message);

@@ -8,6 +8,7 @@ const nextConfig = {
   },
   env: {
     NEXTAUTH_SECRET: "clnfjdnfjljlhufbu7njnjnjnkdnk",
+    API_URL: "https://alim-store-be.vercel.app",
   },
 };
 

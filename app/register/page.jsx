@@ -43,7 +43,7 @@ const Page = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/user/register", {
+      const response = await axios.post(`${process.env.API_URL}/api/user/register`, {
         firstname: firstname,
         lastname: lastname,
         email: email,
@@ -67,72 +67,6 @@ const Page = () => {
 
   return (
     <>
-      {/* <section>
-        <div className="flex items-center justify-center bg-[#F6F5FF] min-h-screen">
-          <div className="w-full    px-[150px] ">
-            <div className="py-[50px] px-[56px]">
-              <div className="text-center pb-[37px]">
-                <h2 className="text-[32px] font-semibold leading-[37px] pb-[7px]">Sign Up</h2>
-                <p className="text-[#9096B2] text-[17px] font-normal leading-5">Create account to start using Alimn</p>
-              </div>
-              <div>
-                <form onSubmit={handleRegister}>
-                  <div className="flex justify-between pb-[23px] gap-2">
-                    <div className="w-full">
-                      <input type="text" placeholder="Firstname" className="w-full outline-none border bg-transparent p-4 rounded-sm placeholder:text-[#9096B2]" value={firstname} onChange={(e) => setFirstname(e.target.value)} />
-                    </div>
-                    <div className="w-full">
-                      <input type="text" placeholder="Lastname" className="w-full outline-none border bg-transparent p-4 rounded-sm placeholder:text-[#9096B2]" value={lastname} onChange={(e) => setLastname(e.target.value)} />
-                    </div>
-                  </div>
-                  <div className="flex justify-between gap-2 pb-[23px]">
-                    <div className="w-full">
-                      <input type="email" placeholder="Email Address" className="w-full outline-none border bg-transparent p-4 rounded-sm placeholder:text-[#9096B2]" value={email} onChange={(e) => setEmail(e.target.value)} />
-                    </div>
-                    <div className="w-full">
-                      <input type="text" placeholder="Mobile" className="w-full outline-none border bg-transparent p-4 rounded-sm placeholder:text-[#9096B2]" value={mobile} onChange={(e) => setMobile(e.target.value)} />
-                    </div>
-                  </div>
-                  <div className="flex justify-between gap-2 pb-[50px]">
-                    <div className="w-full">
-                      <input type="password" placeholder="Password" className="w-full outline-none border bg-transparent p-4 rounded-sm placeholder:text-[#9096B2]" value={password} onChange={(e) => setPassword(e.target.value)} />
-                    </div>
-                    <div className="w-full">
-                      <input
-                        type="password"
-                        placeholder="Confirm Password"
-                        className="w-full outline-none border bg-transparent p-4 rounded-sm placeholder:text-[#9096B2]"
-                        value={confPassword}
-                        onChange={(e) => setConfPassword(e.target.value)}
-                      />
-                    </div>
-                  </div>
-                  <div className="pb-7">
-                    <button className="w-full py-[14px] text-[17px]  text-white bg-[#FB2E86] font-bold rounded-[3px] hover:bg-purple  transition duration-300" type="submit">
-                      Register
-                    </button>
-                  </div>
-                  <div className="text-center ">
-                    <p className="text-[#9096B2] text-[17px]">
-                      Already have an Account?
-                      <Link className="text-[#101750] " href={"/"}>
-                        Login
-                      </Link>
-                    </p>
-                  </div>
-                </form>
-                <p className="text-xs text-pink-600">{message}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-          <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
-            {message} !!!
-          </Alert>
-        </Snackbar>
-      </section> */}
-
       <section>
         <div className="grid h-screen grid-cols-2 ">
           <div className="flex items-center justify-center ">

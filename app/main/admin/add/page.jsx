@@ -63,7 +63,7 @@ const Page = () => {
     formDataToSend.append("color", formData.color);
     formDataToSend.append("quantity", formData.quantity);
 
-    const response = await fetch("http://localhost:5000/api/products/create-product", {
+    const response = await fetch(`${process.env.API_URL}/api/products/create-product`, {
       method: "POST",
       body: formDataToSend,
     });

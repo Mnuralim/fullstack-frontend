@@ -39,7 +39,7 @@ const AddImages = ({ product }) => {
       formDataToSend.append("images", image);
     });
 
-    const response = await fetch(`http://localhost:5000api/products/add-images/${product._id}`, {
+    const response = await fetch(`${process.env.API_URL}/products/add-images/${product._id}`, {
       method: "PUT",
       body: formDataToSend,
     });
@@ -67,7 +67,7 @@ const AddImages = ({ product }) => {
       <input type="checkbox" checked={modal} onChange={handleChange} className="modal-toggle" />
 
       <div className="modal z-[99999999999999] ">
-        <div className="modal-box overflow-hidden">
+        <div className="overflow-hidden modal-box">
           <div>
             <div className="text-[#1D3178] text-[18px] font-semibold pt-[69px] pb-[43px] px-9">Add Images</div>
             <form action="" onSubmit={handleAddImages}>
@@ -92,7 +92,7 @@ const AddImages = ({ product }) => {
               </div>
             </form>
           </div>
-          <div className="modal-action mt-0">
+          <div className="mt-0 modal-action">
             <button type="button" className="btn" onClick={handleChange}>
               Close
             </button>
