@@ -18,8 +18,8 @@ const About = () => {
       <section className="pt-[119px]">
         <div className="px-[150px]">
           <div className="grid grid-cols-2 gap-3">
-            <div className="w-[552px] h-[409px] bg-[#2B3CAB] rounded relative mr-5">
-              <div style={{ backgroundImage: "url('/img/Rectangle 56.png')" }} className="w-[555px] h-[390px] absolute left-[15px]"></div>
+            <div className="w-[500px] h-[409px] bg-[#2B3CAB] rounded relative mr-5">
+              <div style={{ backgroundImage: "url('/img/Rectangle 56.png')" }} className="w-[500px] h-[390px] absolute left-[15px]"></div>
               {/* <Image src={"/img/Rectangle 56.png"} width={552} height={40} /> */}
             </div>
             <div className="max-w-[550px] pt-5 px-5">
