@@ -20,7 +20,7 @@ export default function Carousel({ images }) {
         className="flex justify-center items-center w-[270px] h-[236px]"
       >
         {images.map((image) => (
-          <div>
+          <div key={image.id}>
             <SwiperSlide key={image.id} className="flex items-center justify-center">
               <div>
                 <Image width={270} height={236} src={image.src} alt="product" className="w-[270px] h-[236px] " />

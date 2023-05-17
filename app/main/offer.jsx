@@ -11,7 +11,7 @@ const Offer = () => {
         <div className="flex justify-center pt-[55px] gap-7">
           <div className="w-[270px] h-[320px] border-[#fff] border-b-2 shadow-2xl shadow-slate-400 flex flex-col justify-center  items-center px-[26px] hover:border-[#FF9100] hover:border-b-2 transition-all ease-in-out duration-300">
             <div className="pb-[27px]">
-              <Image src={"/img/free-delivery 1.png"} width={65} height={65} />
+              <Image src={"/img/free-delivery 1.png"} width={65} height={65} alt="offer" />
             </div>
             <div className="pb-5">
               <p className="text-[#151875] text-[22px]">Free Deliveryt</p>
