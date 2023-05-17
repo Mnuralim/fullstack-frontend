@@ -82,7 +82,7 @@ const Page = () => {
       setLoading(false);
     }
     setTimeout(() => {
-      router.push("/admin/product");
+      router.push("/main/admin/product");
     }, 3000);
   };
 

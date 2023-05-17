@@ -17,11 +17,12 @@ const About = () => {
 
       <section className="pt-[119px]">
         <div className="px-[150px]">
-          <div className="grid grid-cols-2 ">
-            <div className="w-[552px] h-[409px] bg-[#2B3CAB] rounded relative ">
+          <div className="grid grid-cols-2 gap-3">
+            <div className="w-[552px] h-[409px] bg-[#2B3CAB] rounded relative mr-5">
               <div style={{ backgroundImage: "url('/img/Rectangle 56.png')" }} className="w-[555px] h-[390px] absolute left-[15px]"></div>
+              {/* <Image src={"/img/Rectangle 56.png"} width={552} height={40} /> */}
             </div>
-            <div className="max-w-[550px] pt-5">
+            <div className="max-w-[550px] pt-5 px-5">
               <h1 className="text-[36px] text-[#151875] font-semibold pb-[14px]">Know About Our Ecomerce Business, History</h1>
               <p className="text-base text-[#8A8FB9] font-semibold pb-[70px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices mattis aliquam, malesuada diam est. Malesuada sem tristique amet erat vitae eget dolor lobortis. Accumsan faucibus vitae lobortis quis bibendum

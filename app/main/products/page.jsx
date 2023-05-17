@@ -79,7 +79,7 @@ const AllProducts = () => {
           <div className="flex justify-between gap-[25px] items-center">
             <div className="flex items-center gap-2">
               <div className="text-[#3F509E] text-base">Per Page:</div>
-              <div className="w-[55px] h-[25px] border block">
+              <div className="w-[55px] h-[25px]  block">
                 <div>
                   <select name="limit" id="limit" className="outline-none  border  text-slate-500 text-sm  px-[6px] py-[2px]" onChange={handleLimitPage}>
                     <option value="25">25</option>

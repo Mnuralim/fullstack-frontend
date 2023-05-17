@@ -16,7 +16,7 @@ const Contact = () => {
 
       <section className="pt-[120px]">
         <div className="px-[150px]">
-          <div className="grid grid-cols-2 gap-[100px]">
+          <div className="grid grid-cols-2 gap-[70px]">
             <div>
               <h1 className="text-[#151875] text-[36px] font-semibold leading-[48px]">Information About us</h1>
               <p className="text-base text-[#8A8FB9] leading-[25px] pt-[13px] pb-[50px] font-semibold">
